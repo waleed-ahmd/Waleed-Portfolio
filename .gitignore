@@ -1,0 +1,11 @@
+# Debug info
+*.dbg.json
+*.tsbuildinfo
+
+# Optional
+.env
+.env.local
+.idea
+docs
+node_modules
+dist/
