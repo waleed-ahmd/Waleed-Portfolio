@@ -2,6 +2,21 @@
 
 A modern single-page portfolio website built with **React**, **TypeScript**, **Vite**, and **styled-components**.
 
+## Continuous Integration
+
+GitHub Actions automatically runs the following checks on every push and pull request:
+
+- ESLint
+- TypeScript compilation
+- Production build
+- Node.js 20 and Node.js 22 compatibility
+
+Run the same checks locally with:
+
+```bash
+npm test
+```
+
 ## Features
 
 - Professional dark tech design
