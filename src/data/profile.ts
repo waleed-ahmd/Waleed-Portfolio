@@ -5,7 +5,7 @@ export const profile = {
   role: 'Software Engineer | Full-Stack Developer | Blockchain & Mobile App Developer',
   location: 'Ireland',
   email: 'waleedansaari786@gmail.com',
-  resumeUrl: '',
+  resumeUrl: '/Waleed_ISE_3rdYear_CV.pdf',
   shortIntro:
     'I build modern web, mobile, and blockchain-based applications using React, TypeScript, Kotlin, Web3, and backend technologies.',
   about:
