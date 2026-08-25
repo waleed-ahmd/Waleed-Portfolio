@@ -56,6 +56,18 @@ export const Company = styled.p`
   font-weight: 800;
 `;
 
+export const CompanyLink = styled.a`
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: ${({ theme }) => theme.colors.primaryLight};
+  font-weight: 800;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+    text-decoration: underline;
+  }
+`;
+
 export const Description = styled.p`
   margin-top: 0.8rem;
   color: ${({ theme }) => theme.colors.mutedText};

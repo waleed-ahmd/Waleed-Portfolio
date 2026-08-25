@@ -27,7 +27,11 @@ export const Projects = () => (
       {projects.map((project) => (
         <ProjectCard key={project.id}>
           <ProjectVisual>
-            <span>{project.imageLabel}</span>
+            {project.image ? (
+              <img src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
+            ) : (
+              <span>{project.imageLabel}</span>
+            )}
           </ProjectVisual>
 
           <ProjectBody>

@@ -1,11 +1,37 @@
-# Debug info
-*.dbg.json
-*.tsbuildinfo
+# Dependencies
+node_modules/
 
-# Optional
-.env
-.env.local
-.idea
-docs
-node_modules
+# Production builds and test output
 dist/
+coverage/
+
+# Local caches
+.vite/
+*.tsbuildinfo
+*.dbg.json
+
+# Environment variables and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local virtual environments
+.venv/
+venv/
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store

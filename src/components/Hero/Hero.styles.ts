@@ -94,7 +94,7 @@ export const ActionLink = styled.a<{ $variant?: 'primary' | 'secondary' }>`
       : 'rgba(255, 255, 255, 0.05)'};
   color: ${({ theme, $variant }) => ($variant === 'primary' ? theme.colors.background : theme.colors.text)};
   font-weight: 900;
-  box-shadow: ${({ theme, $variant }) =>
+  box-shadow: ${({ $variant }) =>
     $variant === 'primary' ? `0 14px 34px rgba(34, 211, 238, 0.18)` : 'none'};
   transition: transform 180ms ease, border-color 180ms ease;
 

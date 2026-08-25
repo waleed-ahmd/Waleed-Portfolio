@@ -36,7 +36,20 @@ export const SkillCard = styled.article`
 `;
 
 export const Icon = styled.div`
-  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  border-radius: ${({ theme }) => theme.radii.md};
+  color: ${({ theme }) => theme.colors.secondary};
+  background: rgba(34, 211, 238, 0.08);
+
+  svg {
+    width: 1.45rem;
+    height: 1.45rem;
+    stroke-width: 2.2;
+  }
 `;
 
 export const Title = styled.h3`

@@ -3,6 +3,7 @@ import { SectionHeading } from '../SectionHeading/SectionHeading';
 import {
   Body,
   Company,
+  CompanyLink,
   Description,
   ExperienceSection,
   Highlights,
@@ -29,7 +30,13 @@ export const Experience = () => (
           </Meta>
           <Body>
             <Role>{item.role}</Role>
-            <Company>{item.company}</Company>
+            {item.companyUrl ? (
+              <CompanyLink href={item.companyUrl} target="_blank" rel="noreferrer">
+                {item.company}
+              </CompanyLink>
+            ) : (
+              <Company>{item.company}</Company>
+            )}
             <Description>{item.description}</Description>
             <Highlights>
               {item.highlights.map((highlight) => (

@@ -4,8 +4,8 @@ export const profile = {
   name: 'Waleed Ahmad',
   role: 'Software Engineer | Full-Stack Developer | Blockchain & Mobile App Developer',
   location: 'Ireland',
-  email: 'your.email@example.com',
-  resumeUrl: '#',
+  email: 'waleedansaari786@gmail.com',
+  resumeUrl: '',
   shortIntro:
     'I build modern web, mobile, and blockchain-based applications using React, TypeScript, Kotlin, Web3, and backend technologies.',
   about:
@@ -24,7 +24,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com/your-github-username' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-linkedin-username' },
-  { label: 'Fiverr', href: 'https://www.fiverr.com/your-fiverr-username' },
+  { label: 'GitHub', href: 'https://github.com/waleed-ahmd' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/waleed-ahmad-3231w/' },
+  { label: 'Fiverr', href: 'https://www.fiverr.com/waleedahmad3231/' },
 ];

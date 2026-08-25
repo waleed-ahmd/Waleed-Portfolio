@@ -30,13 +30,23 @@ export const ProjectCard = styled.article`
 `;
 
 export const ProjectVisual = styled.div`
-  min-height: 180px;
+  height: clamp(190px, 24vw, 260px);
   display: grid;
   place-items: center;
+  padding: 0.75rem;
+  overflow: hidden;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
   background:
     linear-gradient(135deg, rgba(124, 58, 237, 0.25), rgba(34, 211, 238, 0.18)),
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 14rem);
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: ${({ theme }) => theme.radii.md};
+  }
 
   span {
     padding: 0.7rem 1rem;

@@ -16,6 +16,7 @@ export interface Project {
   features: string[];
   technologies: string[];
   imageLabel: string;
+  image?: string;
   github?: string;
   liveDemo?: string;
 }
@@ -23,6 +24,7 @@ export interface Project {
 export interface ExperienceItem {
   role: string;
   company: string;
+  companyUrl?: string;
   period: string;
   description: string;
   highlights: string[];
