@@ -24,7 +24,7 @@ npm test
 - React + TypeScript component structure
 - styled-components theme and global styles
 - Typed data files for projects, skills, services, and experience
-- Contact form using `mailto:` by default
+- Contact form powered by EmailJS
 - Ready for deployment on Vercel or Netlify
 
 ## Getting Started
@@ -77,6 +77,28 @@ Replace the placeholder GitHub, LinkedIn, Fiverr, project, and email links in:
 src/data/profile.ts
 src/data/projects.ts
 ```
+
+### Configure EmailJS
+
+1. Create an EmailJS service and email template.
+2. Copy `.env.example` to `.env`.
+3. Add your EmailJS values:
+
+```txt
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Use these template variables in EmailJS:
+
+```txt
+from_name
+from_email
+message
+```
+
+Add the same variables to your hosting provider before deploying.
 
 ## Deployment
 

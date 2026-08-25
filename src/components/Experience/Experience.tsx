@@ -18,7 +18,7 @@ export const Experience = () => (
     <SectionHeading
       eyebrow="Experience"
       title="Practical experience across software projects, CMS workflows, and product-style development."
-      intro="This section connects your learning with real development work and gives employers confidence in your practical ability."
+      intro="From internships to freelance projects, I have hands-on experience in building real-world applications and solutions."
     />
 
     <Timeline>

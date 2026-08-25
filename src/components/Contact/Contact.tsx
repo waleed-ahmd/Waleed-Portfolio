@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { profile, socialLinks } from '../../data/profile';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
@@ -14,22 +15,53 @@ import {
   SubmitButton,
 } from './Contact.styles';
 
+const emailJsConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
+
 export const Contact = () => {
   const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const name = data.get('name')?.toString() ?? '';
     const email = data.get('email')?.toString() ?? '';
     const message = data.get('message')?.toString() ?? '';
 
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name || 'a visitor'}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    if (!emailJsConfig.serviceId || !emailJsConfig.templateId || !emailJsConfig.publicKey) {
+      setStatus('EmailJS is not configured yet. Please email me directly using the contact link.');
+      return;
+    }
 
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-    setStatus('Your email app should open with the message ready to send.');
-    event.currentTarget.reset();
+    setIsSubmitting(true);
+    setStatus('Sending your message...');
+
+    try {
+      await emailjs.send(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        {
+          from_name: name,
+          from_email: email,
+          message,
+        },
+        {
+          publicKey: emailJsConfig.publicKey,
+        },
+      );
+
+      setStatus('Thanks, your message has been sent.');
+      form.reset();
+    } catch {
+      setStatus('Sorry, the message could not be sent. Please email me directly using the contact link.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -73,8 +105,10 @@ export const Contact = () => {
             Message
             <textarea name="message" placeholder="Tell me about your project or opportunity" required />
           </Field>
-          <SubmitButton type="submit">Send Message</SubmitButton>
-          {status ? <SmallNote>{status}</SmallNote> : <SmallNote>This form uses your email app. You can connect EmailJS later if needed.</SmallNote>}
+          <SubmitButton type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+          </SubmitButton>
+          {status ? <SmallNote>{status}</SmallNote> : <SmallNote>Messages are sent securely through EmailJS.</SmallNote>}
         </Form>
       </Panel>
     </ContactSection>

@@ -12,24 +12,25 @@
     "test": "npm run check"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@vitejs/plugin-react-swc": "latest",
-    "vite": "latest",
-    "typescript": "latest",
+    "framer-motion": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "styled-components": "latest",
     "react-icons": "latest",
-    "framer-motion": "latest"
+    "styled-components": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   },
   "devDependencies": {
+    "@eslint/js": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/styled-components": "latest",
     "eslint": "latest",
-    "@eslint/js": "latest",
-    "typescript-eslint": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
-    "globals": "latest"
+    "globals": "latest",
+    "typescript-eslint": "latest"
   }
 }
