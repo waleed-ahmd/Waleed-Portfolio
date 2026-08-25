@@ -19,7 +19,7 @@ export const Skills = () => (
     <SectionHeading
       eyebrow="Skills"
       title="A focused technical stack for modern software development."
-      intro="Grouped skills make the portfolio easier to understand for recruiters, clients, and technical interviewers."
+      intro="From frontend to backend, mobile, and Web3 development, I have a well-rounded skill set that enables me to build complete software solutions."
     />
 
     <Grid>

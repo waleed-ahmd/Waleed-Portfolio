@@ -10,7 +10,7 @@ export const profile = {
     'I build modern web, mobile, and blockchain-based applications using React, TypeScript, Kotlin, Web3, and backend technologies.',
   about:
     'I am a software engineering student and developer with practical experience in building web applications, mobile apps, blockchain-based systems, and CMS-supported platforms. I enjoy turning ideas into working products through clean code, structured design, and user-focused development.',
-  availability: 'Available for internships, placements, freelance projects, and collaboration.',
+  availability: 'Available for part-time or full-time role, freelance projects, and collaboration.',
 };
 
 export const navItems: NavItem[] = [

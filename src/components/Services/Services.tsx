@@ -7,7 +7,7 @@ export const Services = () => (
     <SectionHeading
       eyebrow="Services"
       title="Clear services for clients, Fiverr buyers, and small businesses."
-      intro="This section turns the portfolio into a business-facing website, not just a personal profile."
+      intro="I provide a range of services to help clients and businesses achieve their goals, from web development to blockchain and healthcare solutions."
     />
 
     <Grid>

@@ -20,7 +20,7 @@ export const Projects = () => (
     <SectionHeading
       eyebrow="Projects"
       title="Featured work that proves the skills, not just lists them."
-      intro="Each project card explains the purpose, features, technology stack, and the kind of problem solved."
+      intro="Each project is a real-world application that demonstrates my ability to build functional, user-focused software solutions."
     />
 
     <Grid>

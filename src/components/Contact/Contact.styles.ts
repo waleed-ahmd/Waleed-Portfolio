@@ -108,6 +108,11 @@ export const SubmitButton = styled.button`
   color: ${({ theme }) => theme.colors.background};
   background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
   font-weight: 950;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.68;
+  }
 `;
 
 export const SmallNote = styled.p`
