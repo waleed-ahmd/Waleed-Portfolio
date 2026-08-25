@@ -33,11 +33,11 @@ export const About = () => (
           </li>
           <li>
             <span>Main stack</span>
-            <span>React + TypeScript</span>
+            <span>React + TypeScript, Java, Kotlin, Solidity, Node.js</span>
           </li>
           <li>
             <span>Focus</span>
-            <span>Web, Mobile, Web3</span>
+            <span>Web, Mobile, Web3, Digital Health</span>
           </li>
         </MetaList>
       </ProfileCard>
@@ -46,8 +46,8 @@ export const About = () => (
         <p>{profile.about}</p>
         <p>
           My experience includes Web3 decentralized applications, blockchain-based message verification,
-          Android development with Kotlin, and industry-based software projects involving Brightspot CMS
-          and backend architecture.
+          Android development with Kotlin, industry-based software projects involving Brightspot CMS
+          and backend architecture and Digital healthcare applications for patient specific communication needs and workflow management.
         </p>
         <Highlights>
           <Highlight>

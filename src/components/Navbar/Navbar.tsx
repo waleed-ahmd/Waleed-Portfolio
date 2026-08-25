@@ -5,6 +5,7 @@ import { Header, Links, Logo, MenuButton, Nav, ResumeButton } from './Navbar.sty
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const hasResume = profile.resumeUrl.length > 0;
 
   const closeMenu = () => setIsOpen(false);
 
@@ -22,9 +23,11 @@ export const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <ResumeButton href={profile.resumeUrl} download={profile.resumeUrl !== '#'}>
-            Download CV
-          </ResumeButton>
+          {hasResume ? (
+            <ResumeButton href={profile.resumeUrl} download>
+              Download CV
+            </ResumeButton>
+          ) : null}
         </Links>
 
         <MenuButton

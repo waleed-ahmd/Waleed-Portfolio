@@ -67,7 +67,7 @@ export const Contact = () => {
           </Field>
           <Field>
             Email
-            <input name="email" type="email" placeholder="your.email@example.com" required />
+            <input name="email" type="email" placeholder="name@email.com" required />
           </Field>
           <Field>
             Message
